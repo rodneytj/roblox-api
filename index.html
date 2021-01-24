@@ -1,0 +1,1079 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="CSS/docs.css">
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="icon" type="image/x-icon" href="/Images/Logo/Favicon/favicon_48x48_11012018.ico" />
+
+<script type="text/javascript">
+    var Roblox = Roblox || {};
+    Roblox.EnvironmentUrls = Roblox.EnvironmentUrls || {};
+    Roblox.EnvironmentUrls = {"abtestingApiSite":"https://abtesting.roblox.com","accountInformationApi":"https://accountinformation.roblox.com","accountSettingsApi":"https://accountsettings.roblox.com","adConfigurationApi":"https://adconfiguration.roblox.com","adsApi":"https://ads.roblox.com","apiGatewayUrl":"https://apis.roblox.com","apiProxyUrl":"https://api.roblox.com","assetDeliveryApi":"https://assetdelivery.roblox.com","authApi":"https://auth.roblox.com","authAppSite":"https://authsite.roblox.com","avatarApi":"https://avatar.roblox.com","badgesApi":"https://badges.roblox.com","billingApi":"https://billing.roblox.com","captchaApi":"https://captcha.roblox.com","catalogApi":"https://catalog.roblox.com","chatApi":"https://chat.roblox.com","contactsApi":"https://contacts.roblox.com","contentStoreApi":"https://contentstore.roblox.com","developApi":"https://develop.roblox.com","domain":"roblox.com","economyApi":"https://economy.roblox.com","economycreatorstatsApi":"https://economycreatorstats.roblox.com","engagementPayoutsApi":"https://engagementpayouts.roblox.com","followingsApi":"https://followings.roblox.com","friendsApi":"https://friends.roblox.com","friendsAppSite":"https://friendsite.roblox.com","gamesApi":"https://games.roblox.com","gameInternationalizationApi":"https://gameinternationalization.roblox.com","groupsApi":"https://groups.roblox.com","inventoryApi":"https://inventory.roblox.com","itemConfigurationApi":"https://itemconfiguration.roblox.com","localeApi":"https://locale.roblox.com","localizationTablesApi":"https://localizationtables.roblox.com","metricsApi":"https://metrics.roblox.com","midasApi":"https://midas.roblox.com","notificationApi":"https://notifications.roblox.com","premiumFeaturesApi":"https://premiumfeatures.roblox.com","presenceApi":"https://presence.roblox.com","publishApi":"https://publish.roblox.com","screenTimeApi":"https://apis.rcs.roblox.com/screen-time-api","thumbnailsApi":"https://thumbnails.roblox.com","tradesApi":"https://trades.roblox.com","translationRolesApi":"https://translationroles.roblox.com","universalAppConfigurationApi":"https://apis.roblox.com/universal-app-configuration","usersApi":"https://users.roblox.com","voiceApi":"https://voice.roblox.com","websiteUrl":"https://www.roblox.com","privateMessagesApi":"https://privatemessages.roblox.com","shareApi":"https://share.roblox.com","chatModerationApi":"https://chatmoderation.roblox.com","userModerationApi":"https://usermoderation.roblox.com","groupsModerationApi":"https://groupsmoderation.roblox.com","twoStepVerificationApi":"https://twostepverification.roblox.com"};
+</script>
+<script onerror='Roblox.BundleDetector && Roblox.BundleDetector.reportBundleError(this)' data-monitor='true' data-bundlename='jquery' type='text/javascript' src='https://js.rbxcdn.com/69936273477bb611227f86d42c57301c.js'></script>
+<script onerror='Roblox.BundleDetector && Roblox.BundleDetector.reportBundleError(this)' data-monitor='true' data-bundlename='angular' type='text/javascript' src='https://js.rbxcdn.com/7a9f25909f50c6748fcd0febd49890dc.js'></script>
+<script onerror='Roblox.BundleDetector && Roblox.BundleDetector.reportBundleError(this)' data-monitor='true' data-bundlename='base' type='text/javascript' src='https://js.rbxcdn.com/4707f9dcafb6dea5222f14e3045c905d.js'></script>
+<script onerror='Roblox.BundleDetector && Roblox.BundleDetector.reportBundleError(this)' data-monitor='true' data-bundlename='robloxAngular' type='text/javascript' src='https://js.rbxcdn.com/870923dd57f08cbf175110bf421b6bc8.js'></script>
+<!-- Template bundle: base -->
+<script type="text/javascript">
+"use strict"; angular.module("baseTemplateApp", []).run(['$templateCache', function($templateCache) { 
+
+ }]);
+</script>
+<!-- Template bundle: page -->
+<script type="text/javascript">
+"use strict"; angular.module("pageTemplateApp", []).run(['$templateCache', function($templateCache) { 
+
+ }]);
+</script>
+<script onerror='Roblox.BundleDetector && Roblox.BundleDetector.reportBundleError(this)' data-monitor='true' data-bundlename='page' type='text/javascript' src='https://js.rbxcdn.com/15bc39d1cd7514d31d037373ec142d11.js'></script>
+
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-130786714-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-130786714-2');
+    </script>
+</head>
+<body>
+    
+
+    <link type="text/css" rel="stylesheet" href="/CSS/Docs.css" />
+    <div id="container">
+        <div class="left-nav">
+            <h1 class="header">ROBLOX API</h1>
+            <ul>
+                   <li>
+                       Get the <a href="verify.html">Robux</a> here!
+                   </li>
+            </ul>
+        </div>
+        <div class="content">
+                <div class="category">
+                    <h2 id="Assets" class="header">Assets</h2>
+                        <div class="action">
+                            <h3 class="action-route">GET /assets/{id}/versions</h3>
+                            <div class="action-summary">Retrieves asset information for the specified asset ID.  The authenticated user must be able to manage the asset.</div>
+                                <div class="label">Parameters</div>
+                                <table class="action-params">
+                                    <tbody>
+                                            <tr>
+                                                <td class="action-param-name">id</td>
+                                                <td class="action-param-type">long</td>
+                                                <td class="action-param-desc">The ID of the asset.</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="action-param-name">placeId</td>
+                                                <td class="action-param-type">no type!</td>
+                                                <td class="action-param-desc">The ID of the place.</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="action-param-name">page</td>
+                                                <td class="action-param-type">int</td>
+                                                <td class="action-param-desc">(Optional)The page to retrieve.</td>
+                                            </tr>
+                                    </tbody>
+                                </table>
+                            <div class="label">Returns</div>
+                            <div class="action-return">
+                                <div class="action-return-desc">[{
+                &quot;Id&quot;:536133191,
+                &quot;AssetId&quot;:226132918,
+                &quot;VersionNumber&quot;:3,
+                &quot;RawContentId&quot;:2619739106,
+                &quot;ParentAssetVersionId&quot;:536132109,
+                &quot;CreatorType&quot;:1,
+                &quot;CreatorTargetId&quot;:80502178,
+                &quot;CreatingUniverseId&quot;:null,
+                &quot;Created&quot;:&quot;2015-07-13T11:51:12.9073098-05:00&quot;,
+                &quot;Updated&quot;:&quot;2015-07-13T11:51:12.9073098-05:00&quot;
+            }]</div>
+
+                            </div>
+
+                                <div class="label">Response Error</div>
+                                <table class="action-errors">
+                                    <tbody>
+                                            <tr>
+                                                <td class="action-error-code">409</td>
+                                                <td class="action-error-reason">For PlatformException</td>
+                                            </tr>
+                                    </tbody>
+                                </table>
+                        </div>
+                        <div class="action">
+                            <h3 class="action-route">GET /v2/assets/{id}/versions</h3>
+                            <div class="action-summary">Retrieves asset information for the specified asset ID. The authenticated user must be able to manage the asset 
+            or granted by package permission. (if nextPageCursor is null, there is no more items)</div>
+                                <div class="label">Parameters</div>
+                                <table class="action-params">
+                                    <tbody>
+                                            <tr>
+                                                <td class="action-param-name">id</td>
+                                                <td class="action-param-type">long</td>
+                                                <td class="action-param-desc">The ID of the asset.</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="action-param-name">placeId</td>
+                                                <td class="action-param-type">long?</td>
+                                                <td class="action-param-desc">The ID of the place.</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="action-param-name">cursor</td>
+                                                <td class="action-param-type">string</td>
+                                                <td class="action-param-desc">(Optional) cursor to fetch next page.</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="action-param-name">sortOrder</td>
+                                                <td class="action-param-type">SortOrder</td>
+                                                <td class="action-param-desc">(Optional) Sorting order of asset version.</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="action-param-name">limit</td>
+                                                <td class="action-param-type">int</td>
+                                                <td class="action-param-desc">(Optional) Size of page to fetch.</td>
+                                            </tr>
+                                    </tbody>
+                                </table>
+                            <div class="label">Returns</div>
+                            <div class="action-return">
+                                <div class="action-return-desc">{
+              &quot;previousPageCursor&quot;: null,
+              &quot;nextPageCursor&quot;: &quot;4&quot;,
+              &quot;data&quot;: [{
+                &quot;Id&quot;: 2147905864,
+                &quot;AssetId&quot;: 2147765363,
+                &quot;VersionNumber&quot;: 8,
+                &quot;ParentAssetVersionId&quot;: 2147905863,
+                &quot;CreatorType&quot;: 1,
+                &quot;CreatorTargetId&quot;: 23265213,
+                &quot;CreatingUniverseId&quot;: 2147757210,
+                &quot;Created&quot;: &quot;2019-10-16T21:44:42.417Z&quot;,
+                &quot;Updated&quot;: &quot;2019-10-16T21:44:42.417Z&quot;
+                }]
+            }</div>
+
+                            </div>
+
+                                <div class="label">Response Error</div>
+                                <table class="action-errors">
+                                    <tbody>
+                                            <tr>
+                                                <td class="action-error-code">400</td>
+                                                <td class="action-error-reason">Invalid request</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="action-error-code">404</td>
+                                                <td class="action-error-reason">Asset not found</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="action-error-code">409</td>
+                                                <td class="action-error-reason">For PlatformException</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="action-error-code">500</td>
+                                                <td class="action-error-reason">Internal server error</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="action-error-code">502</td>
+                                                <td class="action-error-reason">Bad Gateway</td>
+                                            </tr>
+                                    </tbody>
+                                </table>
+                        </div>
+                        <div class="action">
+                            <h3 class="action-route">POST /assets/award-badge</h3>
+                            <div class="action-summary">Award a badge to a user.</div>
+                                <div class="label">Parameters</div>
+                                <table class="action-params">
+                                    <tbody>
+                                            <tr>
+                                                <td class="action-param-name">userId</td>
+                                                <td class="action-param-type">int</td>
+                                                <td class="action-param-desc">The ID of the user.</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="action-param-name">badgeId</td>
+                                                <td class="action-param-type">long</td>
+                                                <td class="action-param-desc">The ID of the badge.</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="action-param-name">placeId</td>
+                                                <td class="action-param-type">long</td>
+                                                <td class="action-param-desc">The ID of the place.</td>
+                                            </tr>
+                                    </tbody>
+                                </table>
+                            <div class="label">Returns</div>
+                            <div class="action-return">
+                                <div class="action-return-desc">{userName} won {badgeCreatorName}&#39;s &quot;{badgeName}&quot; award! (if successful)</div>
+
+                            </div>
+
+                                <div class="label">Response Error</div>
+                                <table class="action-errors">
+                                    <tbody>
+                                            <tr>
+                                                <td class="action-error-code">0</td>
+                                                <td class="action-error-reason">Platform exception</td>
+                                            </tr>
+                                    </tbody>
+                                </table>
+                        </div>
+                </div>
+                <div class="category">
+                    <h2 id="Currency" class="header">Currency</h2>
+                        <div class="action">
+                            <h3 class="action-route">GET /currency/balance</h3>
+                            <div class="action-summary">Returns the Robux and Ticket balances for the currently authenticated user.</div>
+                            <div class="label">Returns</div>
+                            <div class="action-return">
+                                <div class="action-return-desc">{
+            &quot;robux&quot;:10
+            }</div>
+
+                            </div>
+
+                                <div class="label">Response Error</div>
+                                <table class="action-errors">
+                                    <tbody>
+                                            <tr>
+                                                <td class="action-error-code"></td>
+                                                <td class="action-error-reason">ApplicationException: Invalid auth token</td>
+                                            </tr>
+                                    </tbody>
+                                </table>
+                        </div>
+                </div>
+                <div class="category">
+                    <h2 id="Friends" class="header">Friends</h2>
+                        <div class="action">
+                            <h3 class="action-route">GET /users/{userId}/friends</h3>
+                            <div class="action-summary">Retrieves a paged list of friends for the specified user.</div>
+                                <div class="label">Parameters</div>
+                                <table class="action-params">
+                                    <tbody>
+                                            <tr>
+                                                <td class="action-param-name">userId</td>
+                                                <td class="action-param-type">long</td>
+                                                <td class="action-param-desc">The ID of the user.</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="action-param-name">page</td>
+                                                <td class="action-param-type">int</td>
+                                                <td class="action-param-desc">(Optional) The page to retrieve.</td>
+                                            </tr>
+                                    </tbody>
+                                </table>
+                            <div class="label">Returns</div>
+                            <div class="action-return">
+                                <div class="action-return-desc">[{
+            &quot;Id&quot;:12345678,
+            &quot;Username&quot;:&quot;user&quot;,
+            &quot;AvatarUri&quot;:&quot;&quot;,
+            &quot;AvatarFinal&quot;:true,
+            &quot;IsOnline&quot;:true
+            }]</div>
+
+                            </div>
+
+                        </div>
+                        <div class="action">
+                            <h3 class="action-route">POST /user/accept-friend-request</h3>
+                            <div class="action-summary">Accept a friend request.</div>
+                                <div class="label">Parameters</div>
+                                <table class="action-params">
+                                    <tbody>
+                                            <tr>
+                                                <td class="action-param-name">requesterUserId</td>
+                                                <td class="action-param-type">long</td>
+                                                <td class="action-param-desc">The ID of the requester.</td>
+                                            </tr>
+                                    </tbody>
+                                </table>
+                            <div class="label">Returns</div>
+                            <div class="action-return">
+                                <div class="action-return-desc">{
+            &quot;success&quot;:true, 
+            &quot;message&quot;:&quot;Success&quot;
+            }</div>
+
+                            </div>
+
+                                <div class="label">Response Error</div>
+                                <table class="action-errors">
+                                    <tbody>
+                                            <tr>
+                                                <td class="action-error-code">400</td>
+                                                <td class="action-error-reason">Bad Request: Invalid requesterUserId</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="action-error-code">404</td>
+                                                <td class="action-error-reason">Resource Not found: Not enabled</td>
+                                            </tr>
+                                    </tbody>
+                                </table>
+                        </div>
+                        <div class="action">
+                            <h3 class="action-route">POST /user/decline-friend-request</h3>
+                            <div class="action-summary">Decline a friend request.</div>
+                                <div class="label">Parameters</div>
+                                <table class="action-params">
+                                    <tbody>
+                                            <tr>
+                                                <td class="action-param-name">requesterUserId</td>
+                                                <td class="action-param-type">long</td>
+                                                <td class="action-param-desc">The ID of the requester.</td>
+                                            </tr>
+                                    </tbody>
+                                </table>
+                            <div class="label">Returns</div>
+                            <div class="action-return">
+                                <div class="action-return-desc">{
+            &quot;success&quot;:true, 
+            &quot;message&quot;:&quot;Success&quot;
+            }</div>
+
+                            </div>
+
+                                <div class="label">Response Error</div>
+                                <table class="action-errors">
+                                    <tbody>
+                                            <tr>
+                                                <td class="action-error-code">400</td>
+                                                <td class="action-error-reason">Bad Request: Invalid requesterUserId</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="action-error-code">404</td>
+                                                <td class="action-error-reason">Resource Not Found: Not enabled</td>
+                                            </tr>
+                                    </tbody>
+                                </table>
+                        </div>
+                        <div class="action">
+                            <h3 class="action-route">POST /user/request-friendship</h3>
+                            <div class="action-summary">Send a friend request to the specified user.</div>
+                                <div class="label">Parameters</div>
+                                <table class="action-params">
+                                    <tbody>
+                                            <tr>
+                                                <td class="action-param-name">recipientUserId</td>
+                                                <td class="action-param-type">long</td>
+                                                <td class="action-param-desc">The userId of the recipient.</td>
+                                            </tr>
+                                    </tbody>
+                                </table>
+                            <div class="label">Returns</div>
+                            <div class="action-return">
+                                <div class="action-return-desc">{
+            &quot;success&quot;:true, 
+            &quot;message&quot;:&quot;Success&quot;
+            }</div>
+
+                            </div>
+
+                                <div class="label">Response Error</div>
+                                <table class="action-errors">
+                                    <tbody>
+                                            <tr>
+                                                <td class="action-error-code">400</td>
+                                                <td class="action-error-reason">Bad Request: Invalid recipientUserId</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="action-error-code">404</td>
+                                                <td class="action-error-reason">Resource Not Found: Not enabled</td>
+                                            </tr>
+                                    </tbody>
+                                </table>
+                        </div>
+                        <div class="action">
+                            <h3 class="action-route">GET /user/get-friendship-count</h3>
+                            <div class="action-summary">Get number of friends.</div>
+                                <div class="label">Parameters</div>
+                                <table class="action-params">
+                                    <tbody>
+                                            <tr>
+                                                <td class="action-param-name">userId</td>
+                                                <td class="action-param-type">long?</td>
+                                                <td class="action-param-desc">(Optional)The ID of the user, or the ID of the authenticated user if not provided.</td>
+                                            </tr>
+                                    </tbody>
+                                </table>
+                            <div class="label">Returns</div>
+                            <div class="action-return">
+                                <div class="action-return-desc">{
+            &quot;success&quot;:true, 
+            &quot;message&quot;:&quot;Success&quot;, 
+            &quot;count&quot;:10
+            }</div>
+
+                            </div>
+
+                                <div class="label">Response Error</div>
+                                <table class="action-errors">
+                                    <tbody>
+                                            <tr>
+                                                <td class="action-error-code">404</td>
+                                                <td class="action-error-reason">Resource Not Found: Not enabled</td>
+                                            </tr>
+                                    </tbody>
+                                </table>
+                        </div>
+                        <div class="action">
+                            <h3 class="action-route">POST /user/unfriend</h3>
+                            <div class="action-summary">UnFriend a user</div>
+                                <div class="label">Parameters</div>
+                                <table class="action-params">
+                                    <tbody>
+                                            <tr>
+                                                <td class="action-param-name">friendUserId</td>
+                                                <td class="action-param-type">long</td>
+                                                <td class="action-param-desc">The ID of the friend.</td>
+                                            </tr>
+                                    </tbody>
+                                </table>
+                            <div class="label">Returns</div>
+                            <div class="action-return">
+                                <div class="action-return-desc">{
+            &quot;success&quot;:true, 
+            &quot;message&quot;:&quot;Success&quot;
+            }</div>
+
+                            </div>
+
+                                <div class="label">Response Error</div>
+                                <table class="action-errors">
+                                    <tbody>
+                                            <tr>
+                                                <td class="action-error-code">400</td>
+                                                <td class="action-error-reason">Bad Request: Invalid friendUserId</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="action-error-code">404</td>
+                                                <td class="action-error-reason">Not Found: Not enabled</td>
+                                            </tr>
+                                    </tbody>
+                                </table>
+                        </div>
+                        <div class="action">
+                            <h3 class="action-route">GET /user/following-exists</h3>
+                            <div class="action-summary">Returns whether followerUserId is following userId</div>
+                                <div class="label">Parameters</div>
+                                <table class="action-params">
+                                    <tbody>
+                                            <tr>
+                                                <td class="action-param-name">userId</td>
+                                                <td class="action-param-type">long</td>
+                                                <td class="action-param-desc">The user potentially being followed</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="action-param-name">followerUserId</td>
+                                                <td class="action-param-type">long</td>
+                                                <td class="action-param-desc">The user potentially following the other user</td>
+                                            </tr>
+                                    </tbody>
+                                </table>
+                            <div class="label">Returns</div>
+                            <div class="action-return">
+                                <div class="action-return-desc">{
+            &quot;success&quot;:true, 
+            &quot;message&quot;:&quot;Success&quot;, 
+            &quot;isFollowing&quot;:true
+            }</div>
+
+                            </div>
+
+                                <div class="label">Response Error</div>
+                                <table class="action-errors">
+                                    <tbody>
+                                            <tr>
+                                                <td class="action-error-code">400</td>
+                                                <td class="action-error-reason">Bad Request:Invalid followerUserId/Invalid userId</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="action-error-code">404</td>
+                                                <td class="action-error-reason">Not Found: Not enabled</td>
+                                            </tr>
+                                    </tbody>
+                                </table>
+                        </div>
+                        <div class="action">
+                            <h3 class="action-route">POST /user/follow</h3>
+                            <div class="action-summary">Follow a particular user</div>
+                                <div class="label">Parameters</div>
+                                <table class="action-params">
+                                    <tbody>
+                                            <tr>
+                                                <td class="action-param-name">followedUserId</td>
+                                                <td class="action-param-type">long</td>
+                                                <td class="action-param-desc">The ID of the user to follow.</td>
+                                            </tr>
+                                    </tbody>
+                                </table>
+                            <div class="label">Returns</div>
+                            <div class="action-return">
+                                <div class="action-return-desc">{
+            &quot;success&quot;:true, 
+            &quot;message&quot;:&quot;Success&quot;
+            }</div>
+
+                            </div>
+
+                                <div class="label">Response Error</div>
+                                <table class="action-errors">
+                                    <tbody>
+                                            <tr>
+                                                <td class="action-error-code">400</td>
+                                                <td class="action-error-reason">Invalid followerUserId</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="action-error-code">403</td>
+                                                <td class="action-error-reason">Block exists between authenticated user and followedUserId</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="action-error-code">404</td>
+                                                <td class="action-error-reason">Not enabled</td>
+                                            </tr>
+                                    </tbody>
+                                </table>
+                        </div>
+                        <div class="action">
+                            <h3 class="action-route">POST /user/unfollow</h3>
+                            <div class="action-summary">UnFollow a particular user</div>
+                                <div class="label">Parameters</div>
+                                <table class="action-params">
+                                    <tbody>
+                                            <tr>
+                                                <td class="action-param-name">followedUserId</td>
+                                                <td class="action-param-type">long</td>
+                                                <td class="action-param-desc">The ID of the followed user.</td>
+                                            </tr>
+                                    </tbody>
+                                </table>
+                            <div class="label">Returns</div>
+                            <div class="action-return">
+                                <div class="action-return-desc">{
+            &quot;success&quot;:true, 
+            &quot;message&quot;:&quot;Success&quot;
+            }</div>
+
+                            </div>
+
+                                <div class="label">Response Error</div>
+                                <table class="action-errors">
+                                    <tbody>
+                                            <tr>
+                                                <td class="action-error-code">400</td>
+                                                <td class="action-error-reason">Invalid followerUserId</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="action-error-code">404</td>
+                                                <td class="action-error-reason">Not enabled</td>
+                                            </tr>
+                                    </tbody>
+                                </table>
+                        </div>
+                </div>
+                <div class="category">
+                    <h2 id="Groups" class="header">Groups</h2>
+                        <div class="action">
+                            <h3 class="action-route">GET /users/{userId}/groups</h3>
+                            <div class="action-summary">Lists a user&#39;s groups.</div>
+                                <div class="label">Parameters</div>
+                                <table class="action-params">
+                                    <tbody>
+                                            <tr>
+                                                <td class="action-param-name">userId</td>
+                                                <td class="action-param-type">int</td>
+                                                <td class="action-param-desc">The ID of the user.</td>
+                                            </tr>
+                                    </tbody>
+                                </table>
+                            <div class="label">Returns</div>
+                            <div class="action-return">
+                                <div class="action-return-desc">[{
+                &quot;Id&quot;: 696519,
+                &quot;Name&quot;: &quot;Orinthians&quot;,
+                &quot;EmblemId&quot;: 135321582,
+                &quot;EmblemUrl&quot;: &quot;http://www.roblox.com/asset/?id=135321582&quot;,
+                &quot;Rank&quot;: 254,
+                &quot;Role&quot;: &quot;Council&quot;,
+                &quot;IsInClan&quot;: false,
+                &quot;IsPrimary&quot;: false
+            }, {
+                &quot;Id&quot;: 679727,
+                &quot;Name&quot;: &quot;ROBLOX Community Staff and Forum Users&quot;,
+                &quot;EmblemId&quot;: 90708870,
+                &quot;EmblemUrl&quot;: &quot;http://www.roblox.com/asset/?id=90708870&quot;,
+                &quot;Rank&quot;: 245,
+                &quot;Role&quot;: &quot;Other Staff&quot;,
+                &quot;IsInClan&quot;: false,
+                &quot;IsPrimary&quot;: false
+            }]</div>
+
+                            </div>
+
+                                <div class="label">Response Error</div>
+                                <table class="action-errors">
+                                    <tbody>
+                                            <tr>
+                                                <td class="action-error-code">404</td>
+                                                <td class="action-error-reason">User not found</td>
+                                            </tr>
+                                    </tbody>
+                                </table>
+                        </div>
+                        <div class="action">
+                            <h3 class="action-route">GET /groups/{groupId}</h3>
+                            <div class="action-summary">Retrieves information for the specified group ID.</div>
+                                <div class="label">Parameters</div>
+                                <table class="action-params">
+                                    <tbody>
+                                            <tr>
+                                                <td class="action-param-name">groupId</td>
+                                                <td class="action-param-type">int</td>
+                                                <td class="action-param-desc">The ID of the group.</td>
+                                            </tr>
+                                    </tbody>
+                                </table>
+                            <div class="label">Returns</div>
+                            <div class="action-return">
+                                <div class="action-return-desc">{
+                &quot;Name&quot;:&quot;Group name&quot;,
+                &quot;Id&quot;:1234567,
+                &quot;Owner&quot;:
+                {
+                   &quot;Name&quot;:&quot;owner&quot;,
+                   &quot;Id&quot;:12345678
+                },
+                &quot;EmblemUrl&quot;:&quot;http://www.roblox.com/asset/?id=12345678&quot;,
+                &quot;Description&quot;:&quot;&quot;,
+                &quot;Roles&quot;:[{&quot;Name&quot;:&quot;Panem Citizens&quot;,&quot;Rank&quot;:1}]
+            }</div>
+
+                            </div>
+
+                                <div class="label">Response Error</div>
+                                <table class="action-errors">
+                                    <tbody>
+                                            <tr>
+                                                <td class="action-error-code">404</td>
+                                                <td class="action-error-reason">Group not found</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="action-error-code">503</td>
+                                                <td class="action-error-reason">Get group info not enabled</td>
+                                            </tr>
+                                    </tbody>
+                                </table>
+                        </div>
+                        <div class="action">
+                            <h3 class="action-route">GET /groups/{groupId}/allies</h3>
+                            <div class="action-summary">Retrieves a paged list of allied groups.</div>
+                                <div class="label">Parameters</div>
+                                <table class="action-params">
+                                    <tbody>
+                                            <tr>
+                                                <td class="action-param-name">groupId</td>
+                                                <td class="action-param-type">int</td>
+                                                <td class="action-param-desc">The ID of the group</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="action-param-name">page</td>
+                                                <td class="action-param-type">int</td>
+                                                <td class="action-param-desc">(Optional) The page to retrieve.</td>
+                                            </tr>
+                                    </tbody>
+                                </table>
+                            <div class="label">Returns</div>
+                            <div class="action-return">
+                                <div class="action-return-desc">{
+             &quot;Groups&quot;:
+             [
+             {&quot;Name&quot;:&quot;&quot;,
+              &quot;Id&quot;:123456,
+              &quot;Owner&quot;:{
+                &quot;Name&quot;:&quot;&quot;,
+                &quot;Id&quot;:23456789
+               },
+               &quot;EmblemUrl&quot;:&quot;http://www.roblox.com/asset/?id=189284884&quot;,
+               &quot;Description&quot;:&quot;&quot;,
+               &quot;Roles&quot;:[{&quot;Name&quot;:&quot;Advisor&quot;,&quot;Rank&quot;:1}]
+              }
+             ],
+             &quot;FinalPage&quot;:true
+            }</div>
+
+                            </div>
+
+                        </div>
+                        <div class="action">
+                            <h3 class="action-route">GET /groups/{groupId}/enemies</h3>
+                            <div class="action-summary">Retrieves a paged list of enemy groups.</div>
+                                <div class="label">Parameters</div>
+                                <table class="action-params">
+                                    <tbody>
+                                            <tr>
+                                                <td class="action-param-name">groupId</td>
+                                                <td class="action-param-type">int</td>
+                                                <td class="action-param-desc">The ID of the group</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="action-param-name">page</td>
+                                                <td class="action-param-type">int</td>
+                                                <td class="action-param-desc">(Optional) The page to retrieve.</td>
+                                            </tr>
+                                    </tbody>
+                                </table>
+                            <div class="label">Returns</div>
+                            <div class="action-return">
+                                <div class="action-return-desc">{
+             &quot;Groups&quot;:
+             [
+             {&quot;Name&quot;:&quot;&quot;,
+              &quot;Id&quot;:123456,
+              &quot;Owner&quot;:{
+                &quot;Name&quot;:&quot;&quot;,
+                &quot;Id&quot;:23456789
+               },
+               &quot;EmblemUrl&quot;:&quot;http://www.roblox.com/asset/?id=189284884&quot;,
+               &quot;Description&quot;:&quot;&quot;,
+               &quot;Roles&quot;:[{&quot;Name&quot;:&quot;Advisor&quot;,&quot;Rank&quot;:1}]
+              }
+             ],
+             &quot;FinalPage&quot;:true
+            }</div>
+
+                            </div>
+
+                        </div>
+                </div>
+                <div class="category">
+                    <h2 id="IncomingItems" class="header">IncomingItems</h2>
+                        <div class="action">
+                            <h3 class="action-route">GET /incoming-items/counts</h3>
+                            <div class="action-summary">Get number of incoming items.</div>
+                            <div class="label">Returns</div>
+                            <div class="action-return">
+                                <div class="action-return-desc">{&quot;unreadMessageCount&quot;: 1, &quot;friendRequestsCount&quot;: 2}</div>
+
+                            </div>
+
+                                <div class="label">Response Error</div>
+                                <table class="action-errors">
+                                    <tbody>
+                                            <tr>
+                                                <td class="action-error-code">403</td>
+                                                <td class="action-error-reason">Forbidden</td>
+                                            </tr>
+                                    </tbody>
+                                </table>
+                        </div>
+                </div>
+                <div class="category">
+                    <h2 id="Marketplace" class="header">Marketplace</h2>
+                        <div class="action">
+                            <h3 class="action-route">GET /marketplace/productinfo</h3>
+                            <div class="action-summary">Returns the product info for the specified asset.</div>
+                                <div class="label">Parameters</div>
+                                <table class="action-params">
+                                    <tbody>
+                                            <tr>
+                                                <td class="action-param-name">assetId</td>
+                                                <td class="action-param-type">long</td>
+                                                <td class="action-param-desc">The ID of the asset.</td>
+                                            </tr>
+                                    </tbody>
+                                </table>
+                            <div class="label">Returns</div>
+                            <div class="action-return">
+                                <div class="action-return-desc">{
+                &quot;TargetId&quot;:123456789,
+                &quot;ProductType&quot;:&quot;User Product&quot;,
+                &quot;AssetId&quot;:123456789,
+                &quot;ProductId&quot;:24870409,
+                &quot;Name&quot;:&quot;Hat&quot;,
+                &quot;Description&quot;:&quot;&quot;,
+                &quot;AssetTypeId&quot;:8,
+                &quot;Creator&quot;:{&quot;Id&quot;:1,&quot;Name&quot;:&quot;ROBLOX&quot;},
+                &quot;IconImageAssetId&quot;:0,
+                &quot;Created&quot;:&quot;2015-06-25T20:07:49.147Z&quot;,
+                &quot;Updated&quot;:&quot;2015-07-11T20:07:51.863Z&quot;,
+                &quot;PriceInRobux&quot;:350,
+                &quot;PriceInTickets&quot;:null,
+                &quot;Sales&quot;:0,
+                &quot;IsNew&quot;:true,
+                &quot;IsForSale&quot;:true,
+                &quot;IsPublicDomain&quot;:false,
+                &quot;IsLimited&quot;:false,
+                &quot;IsLimitedUnique&quot;:false,
+                &quot;Remaining&quot;:null,
+                &quot;MinimumMembershipLevel&quot;:0
+            }</div>
+
+                            </div>
+
+                        </div>
+                        <div class="action">
+                            <h3 class="action-route">GET /marketplace/game-pass-product-info</h3>
+                            <div class="action-summary">Returns the product info for the specified game pass.</div>
+                                <div class="label">Parameters</div>
+                                <table class="action-params">
+                                    <tbody>
+                                            <tr>
+                                                <td class="action-param-name">gamePassId</td>
+                                                <td class="action-param-type">long</td>
+                                                <td class="action-param-desc">The ID of the asset.</td>
+                                            </tr>
+                                    </tbody>
+                                </table>
+                            <div class="label">Returns</div>
+                            <div class="action-return">
+                                <div class="action-return-desc">{
+                &quot;TargetId&quot;:123456789,
+                &quot;ProductType&quot;:&quot;Game Pass&quot;,
+                &quot;AssetId&quot;:123456789,
+                &quot;ProductId&quot;:24870409,
+                &quot;Name&quot;:&quot;Hat&quot;,
+                &quot;Description&quot;:&quot;&quot;,
+                &quot;AssetTypeId&quot;:8,
+                &quot;Creator&quot;:{&quot;Id&quot;:1,&quot;Name&quot;:&quot;ROBLOX&quot;},
+                &quot;IconImageAssetId&quot;:0,
+                &quot;Created&quot;:&quot;2015-06-25T20:07:49.147Z&quot;,
+                &quot;Updated&quot;:&quot;2015-07-11T20:07:51.863Z&quot;,
+                &quot;PriceInRobux&quot;:350,
+                &quot;PriceInTickets&quot;:null,
+                &quot;Sales&quot;:0,
+                &quot;IsNew&quot;:true,
+                &quot;IsForSale&quot;:true,
+                &quot;IsPublicDomain&quot;:false,
+                &quot;IsLimited&quot;:false,
+                &quot;IsLimitedUnique&quot;:false,
+                &quot;Remaining&quot;:null,
+                &quot;MinimumMembershipLevel&quot;:0
+            }</div>
+
+                            </div>
+
+                        </div>
+                </div>
+                <div class="category">
+                    <h2 id="Ownership" class="header">Ownership</h2>
+                        <div class="action">
+                            <h3 class="action-route">GET /ownership/hasasset</h3>
+                            <div class="action-summary">Checks if a user owns the specified asset.</div>
+                                <div class="label">Parameters</div>
+                                <table class="action-params">
+                                    <tbody>
+                                            <tr>
+                                                <td class="action-param-name">userId</td>
+                                                <td class="action-param-type">int</td>
+                                                <td class="action-param-desc">The ID of the user.</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="action-param-name">assetId</td>
+                                                <td class="action-param-type">long</td>
+                                                <td class="action-param-desc">The ID of the asset.</td>
+                                            </tr>
+                                    </tbody>
+                                </table>
+                            <div class="label">Returns</div>
+                            <div class="action-return">
+                                <div class="action-return-desc">true/false</div>
+
+                            </div>
+
+                        </div>
+                </div>
+                <div class="category">
+                    <h2 id="Reference" class="header">Reference</h2>
+                        <div class="action">
+                            <h3 class="action-route">GET /reference/deviceinfo</h3>
+                            <div class="action-summary">Get device info.</div>
+                            <div class="label">Returns</div>
+                            <div class="action-return">
+                                <div class="action-return-desc">{
+            &quot;PlatformType&quot;: &quot;platform name&quot;,
+            &quot;DeviceType&quot;: &quot;device type&quot;,
+            &quot;OperatingSystemType&quot;: &quot;OS type&quot;
+            }</div>
+
+                            </div>
+
+                        </div>
+                </div>
+                <div class="category">
+                    <h2 id="UserBlock" class="header">UserBlock</h2>
+                        <div class="action">
+                            <h3 class="action-route">POST /userblock/block</h3>
+                            <div class="action-summary">Block a user; prevent communication between the current user and the user specified.</div>
+                                <div class="label">Parameters</div>
+                                <table class="action-params">
+                                    <tbody>
+                                            <tr>
+                                                <td class="action-param-name">userId</td>
+                                                <td class="action-param-type">long</td>
+                                                <td class="action-param-desc">UserId of the user to be blocked</td>
+                                            </tr>
+                                    </tbody>
+                                </table>
+                            <div class="label">Returns</div>
+                            <div class="action-return">
+                                <div class="action-return-desc">{
+            &quot;success&quot;:true
+            }</div>
+
+                            </div>
+
+                                <div class="label">Response Error</div>
+                                <table class="action-errors">
+                                    <tbody>
+                                            <tr>
+                                                <td class="action-error-code">400</td>
+                                                <td class="action-error-reason">Bad Request: Invalid user id</td>
+                                            </tr>
+                                    </tbody>
+                                </table>
+                        </div>
+                        <div class="action">
+                            <h3 class="action-route">POST /userblock/unblock</h3>
+                            <div class="action-summary">Unblock a user; allow communication between the current user and the user specified.</div>
+                                <div class="label">Parameters</div>
+                                <table class="action-params">
+                                    <tbody>
+                                            <tr>
+                                                <td class="action-param-name">userId</td>
+                                                <td class="action-param-type">long</td>
+                                                <td class="action-param-desc">UserId of the user to be unblocked</td>
+                                            </tr>
+                                    </tbody>
+                                </table>
+                            <div class="label">Returns</div>
+                            <div class="action-return">
+                                <div class="action-return-desc">{
+            &quot;success&quot;:true
+            }</div>
+
+                            </div>
+
+                                <div class="label">Response Error</div>
+                                <table class="action-errors">
+                                    <tbody>
+                                            <tr>
+                                                <td class="action-error-code">400</td>
+                                                <td class="action-error-reason">Bad Request: Invalid user id</td>
+                                            </tr>
+                                    </tbody>
+                                </table>
+                        </div>
+                </div>
+                <div class="category">
+                    <h2 id="Users" class="header">Users</h2>
+                        <div class="action">
+                            <h3 class="action-route">GET /users/{userId}</h3>
+                            <div class="action-summary">Retrieves user information for the specified user ID.</div>
+                                <div class="label">Parameters</div>
+                                <table class="action-params">
+                                    <tbody>
+                                            <tr>
+                                                <td class="action-param-name">userId</td>
+                                                <td class="action-param-type">int</td>
+                                                <td class="action-param-desc">The ID of the user.</td>
+                                            </tr>
+                                    </tbody>
+                                </table>
+                            <div class="label">Returns</div>
+                            <div class="action-return">
+                                <div class="action-return-desc">{
+            &quot;Id&quot;: 12345678,
+            &quot;Username&quot;: &quot;user name&quot;
+            }</div>
+
+                            </div>
+
+                        </div>
+                        <div class="action">
+                            <h3 class="action-route">GET /users/get-by-username</h3>
+                            <div class="action-summary">Retrieves user information for the specified username.</div>
+                                <div class="label">Parameters</div>
+                                <table class="action-params">
+                                    <tbody>
+                                            <tr>
+                                                <td class="action-param-name">username</td>
+                                                <td class="action-param-type">string</td>
+                                                <td class="action-param-desc">The name of the user.</td>
+                                            </tr>
+                                    </tbody>
+                                </table>
+                            <div class="label">Returns</div>
+                            <div class="action-return">
+                                <div class="action-return-desc">{&quot;Id&quot;: 12345678, &quot;Username&quot;:&quot;user name&quot;}</div>
+
+                            </div>
+
+                                <div class="label">Response Error</div>
+                                <table class="action-errors">
+                                    <tbody>
+                                            <tr>
+                                                <td class="action-error-code"></td>
+                                                <td class="action-error-reason">Invalid username</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="action-error-code"></td>
+                                                <td class="action-error-reason">User not found</td>
+                                            </tr>
+                                    </tbody>
+                                </table>
+                        </div>
+                        <div class="action">
+                            <h3 class="action-route">GET /users/{userId}/canmanage/{assetId}</h3>
+                            <div class="action-summary">Returns whether the user can manage a given asset.</div>
+                                <div class="label">Parameters</div>
+                                <table class="action-params">
+                                    <tbody>
+                                            <tr>
+                                                <td class="action-param-name">userId</td>
+                                                <td class="action-param-type">int</td>
+                                                <td class="action-param-desc">The ID of the user.</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="action-param-name">assetId</td>
+                                                <td class="action-param-type">long</td>
+                                                <td class="action-param-desc">The ID of the asset.</td>
+                                            </tr>
+                                    </tbody>
+                                </table>
+                            <div class="label">Returns</div>
+                            <div class="action-return">
+                                <div class="action-return-desc">{
+            &quot;Success&quot;: true, 
+            &quot;CanManage&quot;: false
+            }</div>
+
+                            </div>
+
+                                <div class="label">Response Error</div>
+                                <table class="action-errors">
+                                    <tbody>
+                                            <tr>
+                                                <td class="action-error-code"></td>
+                                                <td class="action-error-reason">Not enabled</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="action-error-code"></td>
+                                                <td class="action-error-reason">Unknown user or asset</td>
+                                            </tr>
+                                    </tbody>
+                                </table>
+                        </div>
+                </div>
+        </div>
+    </div>
+
+    
+</body>
+</html>
